@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For Mishu</title>
+  <style>
+    body {
+      background-color: #fce4ec;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 50px;
+      color: #880e4f;
+      overflow: hidden;
+      position: relative;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+    p {
+      font-size: 1.5em;
+    }
+    button {
+      background-color: #f8bbd0;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .heart {
+      position: absolute;
+      animation: float 6s infinite ease-in-out;
+      opacity: 0.6;
+      font-size: 2em;
+      color: #f06292;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-100vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Hey Mishu 💖</h1>
+  <p>Good luck with your exams — I believe in you!</p>
+  <p>Take breaks, stay warm, and remember Lizzy’s always here for you.</p>
+  <button onclick="alert('Mishu, you mean the world to me 💕 Love, Lizzy.')">Click me 💌</button>
+
+  <script>
+    for (let i = 0; i < 20; i++) {
+      let heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "💗";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 5 + 3) + "s";
+      document.body.appendChild(heart);
+    }
+  </script>
+</body>
+</html>
